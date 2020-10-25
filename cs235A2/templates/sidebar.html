@@ -1,0 +1,12 @@
+<aside id="sidebar">
+
+    <header>
+        <h1>Select your favorite category</h1>
+    </header>
+    <div>
+    {% for key in genre_urls %}
+      <a class="btn-side" href="{{ genre_urls[key] }}">{{ key }}</a>
+    {% endfor %}
+    </div>
+
+</aside>

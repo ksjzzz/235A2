@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<main id="main">
+  <h2>Enter an actor you want to search</h2>
+        <form method="POST" action="{{ handler_url_for_actor }}">
+             {{ actorForm.csrf_token }} <!-- Need to include this token - Flask WTForms requires it. -->
+            <div class="form-field"> {{ actorForm.content }}
+            </div>
+            {{ actorForm.submit }}
+        </form>
+    <br/>
+    <br/>
+    <br/>
+      <h2>Enter a director you want to search</h2>
+        <form method="POST" action="{{ handler_url_for_director }}">
+             {{ directorForm.csrf_token }} <!-- Need to include this token - Flask WTForms requires it. -->
+            <div class="form-field"> {{ directorForm.content }}
+            </div>
+            {{ directorForm.submit }}
+        </form>
+
+
+
+</main>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} {% block content %}
+<main id="main">
+    <h2>Popular movies</h2>
+    {% for movie in selected_movies %}
+        <div id="movie-container">
+            <div id="movie-description">
+                <p>Movie: {{ movie.title }} in {{ movie.date }}</p>
+                <P>Director: {{movie.director}}</P>
+                <p>Actor: {{movie.actor}}</p>
+                <p>Genre: {{movie.genre}}</p>
+
+            </div>
+        </div>
+    {% endfor %}
+</main>
+{% endblock %}
